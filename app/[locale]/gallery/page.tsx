@@ -1,0 +1,110 @@
+import type { Locale } from '@/lib/i18n/config';
+import { getDictionary } from '@/lib/i18n/get-dictionary';
+import { imageLibrary } from '@/data/images';
+import Image from 'next/image';
+
+export default async function GalleryPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+
+  const allImages = [
+    ...imageLibrary.gallery.fruits,
+    ...imageLibrary.gallery.location,
+    ...imageLibrary.gallery.merch,
+  ];
+
+  return (
+    <div className="pt-32 pb-20 min-h-screen bg-cream">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            {dict.gallery.title}
+          </h1>
+          <p className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
+            {dict.gallery.subtitle}
+          </p>
+        </div>
+
+        {/* Masonry Grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {allImages.map((image, index) => (
+            <div
+              key={index}
+              className="break-inside-avoid relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative w-full aspect-square">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-tropical-green/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-white font-display font-semibold text-lg px-4 py-2 bg-tropical-green/50 backdrop-blur-sm rounded-full">
+                    Taste the Tropics
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Categories */}
+        <div className="mt-20">
+          <h2 className="text-2xl font-display font-bold text-center text-foreground mb-8">
+            {locale === 'fr' ? 'Par catégorie' : 'By category'}
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Fruits */}
+            <div className="bg-white rounded-2xl p-6">
+              <h3 className="text-xl font-display font-bold text-tropical-green mb-4">
+                {locale === 'fr' ? 'Fruits Givrés' : 'Frozen Fruits'}
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {imageLibrary.gallery.fruits.slice(0, 4).map((image, index) => (
+                  <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="bg-white rounded-2xl p-6">
+              <h3 className="text-xl font-display font-bold text-tropical-green mb-4">
+                {locale === 'fr' ? 'Le Lieu' : 'The Location'}
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {imageLibrary.gallery.location.map((image, index) => (
+                  <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Merch */}
+            <div className="bg-white rounded-2xl p-6">
+              <h3 className="text-xl font-display font-bold text-tropical-green mb-4">
+                {locale === 'fr' ? 'Merch & Produits' : 'Merch & Products'}
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {imageLibrary.gallery.merch.map((image, index) => (
+                  <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "fruits": "Fruits Givrés",
+    "drinks": "Boissons",
+    "gallery": "Galerie",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Taste the Tropics"
+  },
+  "home": {
+    "hero": {
+      "label": "Frozen Island – Bali",
+      "title": "La fraîcheur tropicale, à l'état pur.",
+      "subtitle": "Découvrez nos fruits exotiques givrés, servis dans leur propre écorce. 100% naturel, sans additifs. Une expérience sensorielle unique au cœur de Bali.",
+      "ctaPrimary": "Découvrir l'expérience",
+      "ctaSecondary": "Voir les fruits givrés"
+    },
+    "why": {
+      "title": "Pourquoi Frozen Island ?",
+      "natural": {
+        "title": "100% naturel",
+        "description": "Aucun additif, aucun conservateur. Juste des fruits frais de Bali, givrés à la perfection."
+      },
+      "authentic": {
+        "title": "Servi dans son propre fruit",
+        "description": "Chaque fruit est servi dans son écorce naturelle pour une expérience authentique et zéro déchet."
+      },
+      "vibe": {
+        "title": "Esprit Bali, luxe décontracté",
+        "description": "Un oasis de fraîcheur où la nature rencontre le raffinement tropical."
+      }
+    },
+    "fruits": {
+      "title": "Nos Fruits Givrés",
+      "description": "Des créations glacées qui célèbrent la générosité des tropiques.",
+      "viewAll": "Voir tous les fruits"
+    },
+    "drinks": {
+      "title": "Boissons Tropicales",
+      "description": "Hydratation naturelle et saveurs ensoleillées.",
+      "viewAll": "Découvrir nos boissons"
+    },
+    "experience": {
+      "title": "L'Expérience sur Place",
+      "subtitle": "Une oasis givrée dans un monde brûlant.",
+      "description": "Plongez dans une atmosphère tropicale où chaque détail compte : bois de bambou, tissus naturels, musique douce. Frozen Island est un sanctuaire de fraîcheur où le temps s'arrête.",
+      "cta": "En savoir plus"
+    },
+    "gallery": {
+      "title": "Moments Givrés",
+      "viewAll": "Voir la galerie complète"
+    },
+    "finalCta": {
+      "title": "Prêt à croquer dans les tropiques ?",
+      "description": "Venez nous rendre visite à Bali ou contactez-nous pour privatiser l'espace.",
+      "cta": "Nous contacter"
+    }
+  },
+  "experience": {
+    "hero": {
+      "title": "L'Expérience Frozen Island",
+      "subtitle": "Bien plus qu'un fruit givré, c'est un voyage sensoriel."
+    },
+    "intro": {
+      "title": "Une oasis givrée au cœur de Bali",
+      "description": "Frozen Island n'est pas seulement un lieu, c'est une parenthèse tropicale. Dès que vous franchissez le seuil, vous êtes transporté dans un univers où la nature et le raffinement se rencontrent."
+    },
+    "ritual": {
+      "title": "Le Rituel de Dégustation",
+      "step1": {
+        "title": "Choisissez votre fruit",
+        "description": "Mangue, coco, fruit du dragon, passion... Laissez-vous guider par vos envies."
+      },
+      "step2": {
+        "title": "On le prépare devant vous",
+        "description": "Chaque fruit est travaillé à la main, givré avec soin dans son écorce naturelle."
+      },
+      "step3": {
+        "title": "Savourez l'instant",
+        "description": "Installez-vous, respirez. Laissez la fraîcheur tropicale vous envahir."
+      }
+    },
+    "ambiance": {
+      "title": "Ambiance & Design",
+      "description": "Matériaux naturels, lumière tamisée, playlist chillwave. Frozen Island est pensé comme un resort miniature : bambou, lin, sable. Chaque élément respire le luxe décontracté.",
+      "quote": "« Un sanctuaire de fraîcheur où le temps s'arrête. »"
+    }
+  },
+  "fruits": {
+    "title": "Fruits Givrés",
+    "subtitle": "Chaque fruit est une œuvre d'art glacée.",
+    "filterAll": "Tous",
+    "filterSignature": "Signatures",
+    "filterBestSeller": "Best-sellers",
+    "filterKidsFriendly": "Kids Friendly"
+  },
+  "drinks": {
+    "title": "Boissons Tropicales",
+    "subtitle": "Hydratation naturelle, saveurs ensoleillées.",
+    "benefits": "Bienfaits"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "L'univers Frozen Island en images."
+  },
+  "about": {
+    "title": "À Propos",
+    "story": {
+      "title": "Notre Histoire",
+      "description": "Frozen Island est né d'une passion pour Bali et ses fruits tropicaux extraordinaires. Nous avons voulu créer un lieu où la nature s'exprime dans toute sa splendeur, sans artifice. Chaque fruit givré est une célébration de la générosité des tropiques."
+    },
+    "values": {
+      "title": "Nos Engagements",
+      "natural": {
+        "title": "100% Naturel",
+        "description": "Zéro additif, zéro conservateur. Seulement des fruits frais et de l'amour."
+      },
+      "local": {
+        "title": "Produits Locaux",
+        "description": "Nous privilégions les fruits cultivés à Bali et en Indonésie."
+      },
+      "sustainable": {
+        "title": "Impact Minimal",
+        "description": "Réduction du plastique, compostage, matériaux durables."
+      }
+    },
+    "location": {
+      "title": "Nous Trouver",
+      "description": "Frozen Island – Bali, Indonésie"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question ? Un événement à organiser ? Écrivez-nous.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "type": "Type de demande",
+      "typeEvent": "Événement",
+      "typePrivate": "Privatisation",
+      "typePress": "Presse",
+      "typeOther": "Autre",
+      "message": "Message",
+      "submit": "Envoyer"
+    },
+    "info": {
+      "title": "Informations",
+      "address": "Frozen Island, Canggu, Bali, Indonésie",
+      "hours": "Tous les jours : 10h - 22h"
+    }
+  },
+  "footer": {
+    "tagline": "Taste the Tropics",
+    "location": "Frozen Island – Bali",
+    "links": {
+      "legal": "Mentions légales",
+      "privacy": "Politique de confidentialité"
+    }
+  }
+}
