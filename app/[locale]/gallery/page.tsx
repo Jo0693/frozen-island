@@ -21,17 +21,17 @@ export default async function GalleryPage({
     <div className="pt-32 pb-20 min-h-screen bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+        <div data-publisher-section="header" className="text-center mb-16">
+          <h1 data-publisher-field="gallery.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {dict.gallery.title}
           </h1>
-          <p className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
+          <p data-publisher-field="gallery.subtitle" className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
             {dict.gallery.subtitle}
           </p>
         </div>
 
         {/* Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div data-publisher-section="masonry-grid" className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {allImages.map((image, index) => (
             <div
               key={index}
@@ -55,7 +55,7 @@ export default async function GalleryPage({
         </div>
 
         {/* Categories */}
-        <div className="mt-20">
+        <div data-publisher-section="categories" className="mt-20">
           <h2 className="text-2xl font-display font-bold text-center text-foreground mb-8">
             {locale === 'fr' ? 'Par catégorie' : 'By category'}
           </h2>

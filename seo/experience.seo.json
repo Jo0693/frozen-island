@@ -1,0 +1,20 @@
+{
+  "fr": {
+    "title": "L'Expérience | Frozen Island – Bali",
+    "description": "Découvrez le rituel de dégustation Frozen Island : choisissez votre fruit, on le prépare devant vous, savourez l'instant dans une ambiance tropicale unique.",
+    "og": {
+      "title": "L'Expérience | Frozen Island – Bali",
+      "description": "Découvrez le rituel de dégustation Frozen Island : une ambiance tropicale unique à Bali.",
+      "type": "website"
+    }
+  },
+  "en": {
+    "title": "The Experience | Frozen Island – Bali",
+    "description": "Discover the Frozen Island tasting ritual: choose your fruit, we prepare it in front of you, savor the moment in a unique tropical ambiance.",
+    "og": {
+      "title": "The Experience | Frozen Island – Bali",
+      "description": "Discover the Frozen Island tasting ritual: a unique tropical ambiance in Bali.",
+      "type": "website"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "fr": {
+    "title": "À Propos",
+    "story": {
+      "title": "Notre Histoire",
+      "description": "Frozen Island est né d'une passion pour Bali et ses fruits tropicaux extraordinaires. Nous avons voulu créer un lieu où la nature s'exprime dans toute sa splendeur, sans artifice. Chaque fruit givré est une célébration de la générosité des tropiques."
+    },
+    "values": {
+      "title": "Nos Engagements",
+      "natural": {
+        "title": "100% Naturel",
+        "description": "Zéro additif, zéro conservateur. Seulement des fruits frais et de l'amour."
+      },
+      "local": {
+        "title": "Produits Locaux",
+        "description": "Nous privilégions les fruits cultivés à Bali et en Indonésie."
+      },
+      "sustainable": {
+        "title": "Impact Minimal",
+        "description": "Réduction du plastique, compostage, matériaux durables."
+      }
+    },
+    "location": {
+      "title": "Nous Trouver",
+      "description": "Frozen Island – Bali, Indonésie"
+    }
+  },
+  "en": {
+    "title": "About Us",
+    "story": {
+      "title": "Our Story",
+      "description": "Frozen Island was born from a passion for Bali and its extraordinary tropical fruits. We wanted to create a place where nature expresses itself in all its splendor, without artifice. Each frozen fruit is a celebration of tropical generosity."
+    },
+    "values": {
+      "title": "Our Commitments",
+      "natural": {
+        "title": "100% Natural",
+        "description": "Zero additives, zero preservatives. Only fresh fruit and love."
+      },
+      "local": {
+        "title": "Local Products",
+        "description": "We prioritize fruits grown in Bali and Indonesia."
+      },
+      "sustainable": {
+        "title": "Minimal Impact",
+        "description": "Plastic reduction, composting, sustainable materials."
+      }
+    },
+    "location": {
+      "title": "Find Us",
+      "description": "Frozen Island – Bali, Indonesia"
+    }
+  }
+}

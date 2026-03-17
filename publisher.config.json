@@ -1,0 +1,28 @@
+{
+  "projet": "Frozen Island — Glacier",
+  "version": "1.0",
+  "pages": [
+    {"id": "home", "nom": "Accueil", "route": "/", "fichier_contenu": "content/home.json", "fichier_seo": "seo/home.seo.json"},
+    {"id": "drinks", "nom": "Boissons", "route": "/drinks", "fichier_contenu": "content/drinks.json", "fichier_seo": "seo/drinks.seo.json"},
+    {"id": "fruits", "nom": "Fruits", "route": "/fruits", "fichier_contenu": "content/fruits.json", "fichier_seo": "seo/fruits.seo.json"},
+    {"id": "experience", "nom": "Expérience", "route": "/experience", "fichier_contenu": "content/experience.json", "fichier_seo": "seo/experience.seo.json"},
+    {"id": "gallery", "nom": "Galerie", "route": "/gallery", "fichier_contenu": "content/gallery.json", "fichier_seo": "seo/gallery.seo.json"},
+    {"id": "about", "nom": "À propos", "route": "/about", "fichier_contenu": "content/about.json", "fichier_seo": "seo/about.seo.json"},
+    {"id": "contact", "nom": "Contact", "route": "/contact", "fichier_contenu": "content/contact.json", "fichier_seo": "seo/contact.seo.json"}
+  ],
+  "design": {
+    "fichier_tokens": "styles/tokens.css",
+    "couleur_primaire": "#0d7a6f",
+    "couleur_secondaire": "#ff9f4a",
+    "couleur_accent": "#ffeaa7",
+    "font_principale": "Baloo 2",
+    "font_secondaire": "Inter",
+    "fonts_disponibles": ["Baloo 2", "Inter"]
+  },
+  "images": {"dossier": "public/"},
+  "i18n": {"actif": true, "langues": ["fr", "en"], "langue_defaut": "fr"},
+  "formulaire": {"service": "resend", "email_destination": "contact@frozen-island.com"},
+  "analytics": {"provider": "", "id": ""},
+  "deployment": {"vercel_project": "frozen-island", "branch": "main"},
+  "effects": {"fichier_config": "effects.config.json", "runtime_installed": false}
+}

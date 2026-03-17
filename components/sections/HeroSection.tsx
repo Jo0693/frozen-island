@@ -30,7 +30,7 @@ export default function HeroSection({
   imageAlt,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-mango/20 via-cream to-off-white overflow-hidden pt-20">
+    <section data-publisher-section="hero" className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-mango/20 via-cream to-off-white overflow-hidden pt-20">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-tropical-green rounded-full blur-3xl" />
@@ -52,7 +52,7 @@ export default function HeroSection({
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-sm font-body text-tropical-green mb-4 uppercase tracking-wider"
             >
-              {label}
+              <span data-publisher-field="hero.label">{label}</span>
             </motion.p>
 
             <motion.h1
@@ -60,6 +60,7 @@ export default function HeroSection({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight"
+              data-publisher-field="hero.title"
             >
               {title}
             </motion.h1>
@@ -69,6 +70,7 @@ export default function HeroSection({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg font-body text-foreground/70 mb-8 max-w-2xl mx-auto lg:mx-0"
+              data-publisher-field="hero.subtitle"
             >
               {subtitle}
             </motion.p>
@@ -84,7 +86,7 @@ export default function HeroSection({
                   href={ctaPrimary.href}
                   className="px-8 py-4 bg-gradient-to-r from-tropical-green to-tropical-green/90 text-white rounded-full font-body font-semibold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  {ctaPrimary.text}
+                  <span data-publisher-field="hero.ctaPrimary">{ctaPrimary.text}</span>
                 </Link>
               )}
               {ctaSecondary && (
@@ -92,7 +94,7 @@ export default function HeroSection({
                   href={ctaSecondary.href}
                   className="px-8 py-4 bg-white text-tropical-green rounded-full font-body font-semibold border-2 border-tropical-green hover:bg-tropical-green hover:text-white transition-all duration-300"
                 >
-                  {ctaSecondary.text}
+                  <span data-publisher-field="hero.ctaSecondary">{ctaSecondary.text}</span>
                 </Link>
               )}
             </motion.div>

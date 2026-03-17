@@ -1,0 +1,21 @@
+/* Frozen Island — Design Tokens */
+/* Extracted from globals.css — Source of truth for Publisher */
+
+:root {
+  /* Primary Palette */
+  --tropical-green: #0d7a6f;
+  --mango: #ff9f4a;
+  --cream: #faf7f2;
+  --off-white: #fefdfb;
+  --sun-yellow: #ffeaa7;
+  --mint: #e8f8f5;
+  --rich-brown: #8b6f47;
+
+  /* Base */
+  --background: #faf7f2;
+  --foreground: #171717;
+
+  /* Typography */
+  --font-display: var(--font-baloo); /* Baloo 2 */
+  --font-body: var(--font-inter);    /* Inter */
+}

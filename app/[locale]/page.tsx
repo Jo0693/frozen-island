@@ -60,13 +60,13 @@ export default async function Home({
       <FeatureCards title={dict.home.why.title} features={features} />
 
       {/* Fruits Section */}
-      <section className="py-20 bg-cream">
+      <section data-publisher-section="fruits" className="py-20 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+            <h2 data-publisher-field="fruits.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               {dict.home.fruits.title}
             </h2>
-            <p className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
+            <p data-publisher-field="fruits.description" className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
               {dict.home.fruits.description}
             </p>
           </div>
@@ -78,20 +78,20 @@ export default async function Home({
               href={`/${locale}/fruits`}
               className="inline-block px-8 py-3 border-2 border-tropical-green text-tropical-green rounded-full font-body font-semibold hover:bg-tropical-green hover:text-white transition-all duration-300"
             >
-              {dict.home.fruits.viewAll}
+              <span data-publisher-field="fruits.viewAll">{dict.home.fruits.viewAll}</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Drinks Section */}
-      <section className="py-20 bg-off-white">
+      <section data-publisher-section="drinks" className="py-20 bg-off-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+            <h2 data-publisher-field="drinks.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               {dict.home.drinks.title}
             </h2>
-            <p className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
+            <p data-publisher-field="drinks.description" className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
               {dict.home.drinks.description}
             </p>
           </div>
@@ -111,10 +111,10 @@ export default async function Home({
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display font-bold text-lg text-foreground mb-2">
+                  <h3 data-publisher-field={`drinks.items[${index}].name`} className="font-display font-bold text-lg text-foreground mb-2">
                     {drink.name[locale]}
                   </h3>
-                  <p className="text-sm text-foreground/70 font-body mb-3">
+                  <p data-publisher-field={`drinks.items[${index}].description`} className="text-sm text-foreground/70 font-body mb-3">
                     {drink.description[locale]}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -137,14 +137,14 @@ export default async function Home({
               href={`/${locale}/drinks`}
               className="inline-block px-8 py-3 border-2 border-tropical-green text-tropical-green rounded-full font-body font-semibold hover:bg-tropical-green hover:text-white transition-all duration-300"
             >
-              {dict.home.drinks.viewAll}
+              <span data-publisher-field="drinks.viewAll">{dict.home.drinks.viewAll}</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 bg-gradient-to-br from-tropical-green/10 via-mint to-cream">
+      <section data-publisher-section="experience" className="py-20 bg-gradient-to-br from-tropical-green/10 via-mint to-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
@@ -158,20 +158,20 @@ export default async function Home({
             </div>
 
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              <h2 data-publisher-field="experience.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
                 {dict.home.experience.title}
               </h2>
-              <p className="text-xl font-display text-tropical-green mb-6">
+              <p data-publisher-field="experience.subtitle" className="text-xl font-display text-tropical-green mb-6">
                 {dict.home.experience.subtitle}
               </p>
-              <p className="text-foreground/70 font-body leading-relaxed mb-8">
+              <p data-publisher-field="experience.description" className="text-foreground/70 font-body leading-relaxed mb-8">
                 {dict.home.experience.description}
               </p>
               <Link
                 href={`/${locale}/experience`}
                 className="inline-block px-8 py-3 bg-tropical-green text-white rounded-full font-body font-semibold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                {dict.home.experience.cta}
+                <span data-publisher-field="experience.cta">{dict.home.experience.cta}</span>
               </Link>
             </div>
           </div>

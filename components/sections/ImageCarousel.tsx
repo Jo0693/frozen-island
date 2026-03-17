@@ -13,7 +13,7 @@ interface ImageCarouselProps {
 
 export default function ImageCarousel({ images, title }: ImageCarouselProps) {
   return (
-    <section className="py-20 bg-cream">
+    <section data-publisher-section="gallery" className="py-20 bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {title && (
           <motion.h2
@@ -21,6 +21,7 @@ export default function ImageCarousel({ images, title }: ImageCarouselProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-12"
+            data-publisher-field="gallery.title"
           >
             {title}
           </motion.h2>

@@ -42,13 +42,13 @@ export default async function ExperiencePage({
       />
 
       {/* Intro */}
-      <section className="py-20 bg-cream">
+      <section data-publisher-section="intro" className="py-20 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+            <h2 data-publisher-field="intro.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
               {dict.experience.intro.title}
             </h2>
-            <p className="text-lg font-body text-foreground/70 leading-relaxed">
+            <p data-publisher-field="intro.description" className="text-lg font-body text-foreground/70 leading-relaxed">
               {dict.experience.intro.description}
             </p>
           </div>
@@ -56,9 +56,9 @@ export default async function ExperiencePage({
       </section>
 
       {/* Ritual Steps */}
-      <section className="py-20 bg-off-white">
+      <section data-publisher-section="ritual" className="py-20 bg-off-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-16">
+          <h2 data-publisher-field="ritual.title" className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-16">
             {dict.experience.ritual.title}
           </h2>
 
@@ -75,11 +75,11 @@ export default async function ExperiencePage({
                     <span className="text-6xl font-display font-bold text-mango/30">
                       {step.number}
                     </span>
-                    <h3 className="text-2xl font-display font-bold text-tropical-green">
+                    <h3 data-publisher-field={`ritual.step${index + 1}.title`} className="text-2xl font-display font-bold text-tropical-green">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-lg font-body text-foreground/70 leading-relaxed">
+                  <p data-publisher-field={`ritual.step${index + 1}.description`} className="text-lg font-body text-foreground/70 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -100,16 +100,16 @@ export default async function ExperiencePage({
       </section>
 
       {/* Ambiance */}
-      <section className="py-20 bg-tropical-green text-white">
+      <section data-publisher-section="ambiance" className="py-20 bg-tropical-green text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
+            <h2 data-publisher-field="ambiance.title" className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
               {dict.experience.ambiance.title}
             </h2>
-            <p className="text-lg font-body text-white/90 leading-relaxed mb-8 text-center">
+            <p data-publisher-field="ambiance.description" className="text-lg font-body text-white/90 leading-relaxed mb-8 text-center">
               {dict.experience.ambiance.description}
             </p>
-            <blockquote className="text-2xl font-display italic text-center text-mango">
+            <blockquote data-publisher-field="ambiance.quote" className="text-2xl font-display italic text-center text-mango">
               {dict.experience.ambiance.quote}
             </blockquote>
           </div>

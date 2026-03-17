@@ -1,0 +1,62 @@
+{
+  "fr": {
+    "hero": {
+      "title": "L'Expérience Frozen Island",
+      "subtitle": "Bien plus qu'un fruit givré, c'est un voyage sensoriel."
+    },
+    "intro": {
+      "title": "Une oasis givrée au cœur de Bali",
+      "description": "Frozen Island n'est pas seulement un lieu, c'est une parenthèse tropicale. Dès que vous franchissez le seuil, vous êtes transporté dans un univers où la nature et le raffinement se rencontrent."
+    },
+    "ritual": {
+      "title": "Le Rituel de Dégustation",
+      "step1": {
+        "title": "Choisissez votre fruit",
+        "description": "Mangue, coco, fruit du dragon, passion... Laissez-vous guider par vos envies."
+      },
+      "step2": {
+        "title": "On le prépare devant vous",
+        "description": "Chaque fruit est travaillé à la main, givré avec soin dans son écorce naturelle."
+      },
+      "step3": {
+        "title": "Savourez l'instant",
+        "description": "Installez-vous, respirez. Laissez la fraîcheur tropicale vous envahir."
+      }
+    },
+    "ambiance": {
+      "title": "Ambiance & Design",
+      "description": "Matériaux naturels, lumière tamisée, playlist chillwave. Frozen Island est pensé comme un resort miniature : bambou, lin, sable. Chaque élément respire le luxe décontracté.",
+      "quote": "« Un sanctuaire de fraîcheur où le temps s'arrête. »"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "The Frozen Island Experience",
+      "subtitle": "More than a frozen fruit, it's a sensory journey."
+    },
+    "intro": {
+      "title": "A frozen oasis in the heart of Bali",
+      "description": "Frozen Island is not just a place, it's a tropical escape. As soon as you cross the threshold, you're transported to a universe where nature and refinement meet."
+    },
+    "ritual": {
+      "title": "The Tasting Ritual",
+      "step1": {
+        "title": "Choose your fruit",
+        "description": "Mango, coconut, dragon fruit, passion fruit... Let your cravings guide you."
+      },
+      "step2": {
+        "title": "We prepare it in front of you",
+        "description": "Each fruit is handcrafted, carefully frozen in its natural shell."
+      },
+      "step3": {
+        "title": "Savor the moment",
+        "description": "Settle in, breathe. Let the tropical freshness wash over you."
+      }
+    },
+    "ambiance": {
+      "title": "Ambiance & Design",
+      "description": "Natural materials, soft lighting, chillwave playlist. Frozen Island is designed like a miniature resort: bamboo, linen, sand. Every element breathes relaxed luxury.",
+      "quote": "« A sanctuary of freshness where time stands still. »"
+    }
+  }
+}

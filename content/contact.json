@@ -1,0 +1,42 @@
+{
+  "fr": {
+    "title": "Contact",
+    "subtitle": "Une question ? Un événement à organiser ? Écrivez-nous.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "type": "Type de demande",
+      "typeEvent": "Événement",
+      "typePrivate": "Privatisation",
+      "typePress": "Presse",
+      "typeOther": "Autre",
+      "message": "Message",
+      "submit": "Envoyer"
+    },
+    "info": {
+      "title": "Informations",
+      "address": "Frozen Island, Canggu, Bali, Indonésie",
+      "hours": "Tous les jours : 10h - 22h"
+    }
+  },
+  "en": {
+    "title": "Contact",
+    "subtitle": "A question? An event to organize? Write to us.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "type": "Request type",
+      "typeEvent": "Event",
+      "typePrivate": "Privatization",
+      "typePress": "Press",
+      "typeOther": "Other",
+      "message": "Message",
+      "submit": "Send"
+    },
+    "info": {
+      "title": "Information",
+      "address": "Frozen Island, Canggu, Bali, Indonesia",
+      "hours": "Every day: 10am - 10pm"
+    }
+  }
+}

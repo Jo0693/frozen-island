@@ -1,0 +1,106 @@
+{
+  "fr": {
+    "title": "Fruits Givrés",
+    "subtitle": "Chaque fruit est une œuvre d'art glacée.",
+    "filterAll": "Tous",
+    "filterSignature": "Signatures",
+    "filterBestSeller": "Best-sellers",
+    "filterKidsFriendly": "Kids Friendly",
+    "items": [
+      {
+        "id": "mango",
+        "name": "Mangue Givrée",
+        "description": "Douceur veloutée et sucrée, la mangue de Bali dans toute sa splendeur tropicale.",
+        "profile": ["fruity", "sweet"],
+        "tags": ["signature", "best-seller"]
+      },
+      {
+        "id": "coconut",
+        "name": "Coco Glacée",
+        "description": "Crème onctueuse et rafraîchissante, servie dans sa noix naturelle.",
+        "profile": ["creamy", "sweet"],
+        "tags": ["signature", "best-seller", "kids-friendly"]
+      },
+      {
+        "id": "dragon-fruit",
+        "name": "Fruit du Dragon Gelé",
+        "description": "Fraîcheur exotique et légèrement sucrée, avec une texture unique.",
+        "profile": ["fruity", "tangy"],
+        "tags": ["signature"]
+      },
+      {
+        "id": "passion",
+        "name": "Passion Givrée",
+        "description": "Acidulé intense et parfumé, pour les amateurs de saveurs vibrantes.",
+        "profile": ["tangy", "fruity"],
+        "tags": ["best-seller"]
+      },
+      {
+        "id": "pineapple",
+        "name": "Ananas Givré",
+        "description": "Fraîcheur tropicale sucrée-acidulée, un classique revisité.",
+        "profile": ["fruity", "tangy", "sweet"],
+        "tags": ["kids-friendly"]
+      },
+      {
+        "id": "papaya",
+        "name": "Papaye Glacée",
+        "description": "Douceur crémeuse et subtile, une invitation au voyage.",
+        "profile": ["creamy", "sweet"],
+        "tags": ["new"]
+      }
+    ]
+  },
+  "en": {
+    "title": "Frozen Fruits",
+    "subtitle": "Each fruit is a frozen work of art.",
+    "filterAll": "All",
+    "filterSignature": "Signatures",
+    "filterBestSeller": "Best-sellers",
+    "filterKidsFriendly": "Kids Friendly",
+    "items": [
+      {
+        "id": "mango",
+        "name": "Frozen Mango",
+        "description": "Velvety smooth sweetness, Bali mango in all its tropical splendor.",
+        "profile": ["fruity", "sweet"],
+        "tags": ["signature", "best-seller"]
+      },
+      {
+        "id": "coconut",
+        "name": "Frozen Coconut",
+        "description": "Creamy and refreshing, served in its natural shell.",
+        "profile": ["creamy", "sweet"],
+        "tags": ["signature", "best-seller", "kids-friendly"]
+      },
+      {
+        "id": "dragon-fruit",
+        "name": "Frozen Dragon Fruit",
+        "description": "Exotic freshness, lightly sweet, with a unique texture.",
+        "profile": ["fruity", "tangy"],
+        "tags": ["signature"]
+      },
+      {
+        "id": "passion",
+        "name": "Frozen Passion Fruit",
+        "description": "Intensely tangy and aromatic, for lovers of vibrant flavors.",
+        "profile": ["tangy", "fruity"],
+        "tags": ["best-seller"]
+      },
+      {
+        "id": "pineapple",
+        "name": "Frozen Pineapple",
+        "description": "Sweet-tangy tropical freshness, a reinvented classic.",
+        "profile": ["fruity", "tangy", "sweet"],
+        "tags": ["kids-friendly"]
+      },
+      {
+        "id": "papaya",
+        "name": "Frozen Papaya",
+        "description": "Creamy and subtle sweetness, an invitation to travel.",
+        "profile": ["creamy", "sweet"],
+        "tags": ["new"]
+      }
+    ]
+  }
+}

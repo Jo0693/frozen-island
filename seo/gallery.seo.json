@@ -1,0 +1,20 @@
+{
+  "fr": {
+    "title": "Galerie | Frozen Island – Bali",
+    "description": "L'univers Frozen Island en images : fruits givrés, ambiance tropicale et produits dérivés. Plongez dans notre galerie photo.",
+    "og": {
+      "title": "Galerie | Frozen Island – Bali",
+      "description": "L'univers Frozen Island en images : fruits givrés, ambiance tropicale et produits dérivés.",
+      "type": "website"
+    }
+  },
+  "en": {
+    "title": "Gallery | Frozen Island – Bali",
+    "description": "The Frozen Island universe in images: frozen fruits, tropical atmosphere and merchandise. Dive into our photo gallery.",
+    "og": {
+      "title": "Gallery | Frozen Island – Bali",
+      "description": "The Frozen Island universe in images: frozen fruits, tropical atmosphere and merchandise.",
+      "type": "website"
+    }
+  }
+}

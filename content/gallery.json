@@ -1,0 +1,20 @@
+{
+  "fr": {
+    "title": "Galerie",
+    "subtitle": "L'univers Frozen Island en images.",
+    "categories": {
+      "fruits": "Fruits Givrés",
+      "location": "Le Lieu",
+      "merch": "Merch & Produits"
+    }
+  },
+  "en": {
+    "title": "Gallery",
+    "subtitle": "The Frozen Island universe in images.",
+    "categories": {
+      "fruits": "Frozen Fruits",
+      "location": "The Location",
+      "merch": "Merch & Products"
+    }
+  }
+}

@@ -33,11 +33,11 @@ export default function FruitsPage({ params }: FruitsPageProps) {
     <div className="pt-32 pb-20 min-h-screen bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+        <div data-publisher-section="header" className="text-center mb-12">
+          <h1 data-publisher-field="fruits.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {locale === 'fr' ? 'Fruits Givrés' : 'Frozen Fruits'}
           </h1>
-          <p className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
+          <p data-publisher-field="fruits.subtitle" className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
             {locale === 'fr'
               ? 'Chaque fruit est une œuvre d\'art glacée.'
               : 'Each fruit is a frozen work of art.'}

@@ -47,6 +47,7 @@ export default function Header({ locale, dict }: HeaderProps) {
 
   return (
     <header
+      data-publisher-section="header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-off-white/95 backdrop-blur-sm shadow-sm'

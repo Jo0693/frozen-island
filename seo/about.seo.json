@@ -1,0 +1,20 @@
+{
+  "fr": {
+    "title": "À Propos | Frozen Island – Bali",
+    "description": "Notre histoire, nos engagements : 100% naturel, produits locaux, impact minimal. Découvrez la philosophie Frozen Island à Bali.",
+    "og": {
+      "title": "À Propos | Frozen Island – Bali",
+      "description": "Notre histoire, nos engagements : 100% naturel, produits locaux, impact minimal.",
+      "type": "website"
+    }
+  },
+  "en": {
+    "title": "About Us | Frozen Island – Bali",
+    "description": "Our story, our commitments: 100% natural, local products, minimal impact. Discover the Frozen Island philosophy in Bali.",
+    "og": {
+      "title": "About Us | Frozen Island – Bali",
+      "description": "Our story, our commitments: 100% natural, local products, minimal impact.",
+      "type": "website"
+    }
+  }
+}

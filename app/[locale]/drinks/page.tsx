@@ -15,17 +15,17 @@ export default async function DrinksPage({
     <div className="pt-32 pb-20 min-h-screen bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+        <div data-publisher-section="header" className="text-center mb-16">
+          <h1 data-publisher-field="drinks.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {dict.drinks.title}
           </h1>
-          <p className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
+          <p data-publisher-field="drinks.subtitle" className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
             {dict.drinks.subtitle}
           </p>
         </div>
 
         {/* Drinks Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div data-publisher-section="drinks-grid" className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {drinks.map((drink) => (
             <div
               key={drink.id}
@@ -42,10 +42,10 @@ export default async function DrinksPage({
                 </div>
 
                 <div className="p-8">
-                  <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                  <h3 data-publisher-field={`drinks.items[${drinks.indexOf(drink)}].name`} className="text-2xl font-display font-bold text-foreground mb-3">
                     {drink.name[locale]}
                   </h3>
-                  <p className="text-foreground/70 font-body mb-6 leading-relaxed">
+                  <p data-publisher-field={`drinks.items[${drinks.indexOf(drink)}].description`} className="text-foreground/70 font-body mb-6 leading-relaxed">
                     {drink.description[locale]}
                   </p>
 

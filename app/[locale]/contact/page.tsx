@@ -83,18 +83,18 @@ export default function ContactPage({ params }: ContactPageProps) {
     <div className="pt-32 pb-20 min-h-screen bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+        <div data-publisher-section="header" className="text-center mb-16">
+          <h1 data-publisher-field="contact.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {t.title}
           </h1>
-          <p className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
+          <p data-publisher-field="contact.subtitle" className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
+          <div data-publisher-section="form" className="bg-white rounded-3xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
@@ -182,22 +182,22 @@ export default function ContactPage({ params }: ContactPageProps) {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-tropical-green to-tropical-green/90 rounded-3xl p-8 text-white">
-              <h2 className="text-2xl font-display font-bold mb-6">{t.info.title}</h2>
+            <div data-publisher-section="info" className="bg-gradient-to-br from-tropical-green to-tropical-green/90 rounded-3xl p-8 text-white">
+              <h2 data-publisher-field="info.title" className="text-2xl font-display font-bold mb-6">{t.info.title}</h2>
 
               <div className="space-y-4">
                 <div>
                   <h3 className="font-body font-semibold mb-2 text-white/90">
                     {locale === 'fr' ? 'Adresse' : 'Address'}
                   </h3>
-                  <p className="font-body text-white/80">{t.info.address}</p>
+                  <p data-publisher-field="info.address" className="font-body text-white/80">{t.info.address}</p>
                 </div>
 
                 <div>
                   <h3 className="font-body font-semibold mb-2 text-white/90">
                     {locale === 'fr' ? 'Horaires' : 'Hours'}
                   </h3>
-                  <p className="font-body text-white/80">{t.info.hours}</p>
+                  <p data-publisher-field="info.hours" className="font-body text-white/80">{t.info.hours}</p>
                 </div>
 
                 <div>

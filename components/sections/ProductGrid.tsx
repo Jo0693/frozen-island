@@ -48,10 +48,10 @@ export default function ProductGrid({ fruits, locale, maxItems }: ProductGridPro
           </div>
 
           <div className="p-6">
-            <h3 className="text-xl font-display font-bold text-foreground mb-2">
+            <h3 data-publisher-field={`fruits.items[${index}].name`} className="text-xl font-display font-bold text-foreground mb-2">
               {fruit.name[locale]}
             </h3>
-            <p className="text-foreground/70 font-body text-sm leading-relaxed mb-4">
+            <p data-publisher-field={`fruits.items[${index}].description`} className="text-foreground/70 font-body text-sm leading-relaxed mb-4">
               {fruit.description[locale]}
             </p>
             <div className="flex flex-wrap gap-2">

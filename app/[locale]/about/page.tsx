@@ -15,14 +15,14 @@ export default async function AboutPage({
     <div className="pt-32 pb-20 min-h-screen bg-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+        <div data-publisher-section="header" className="text-center mb-16">
+          <h1 data-publisher-field="about.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {dict.about.title}
           </h1>
         </div>
 
         {/* Story Section */}
-        <section className="mb-20">
+        <section data-publisher-section="story" className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="relative h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
@@ -34,10 +34,10 @@ export default async function AboutPage({
             </div>
 
             <div>
-              <h2 className="text-3xl font-display font-bold text-tropical-green mb-6">
+              <h2 data-publisher-field="story.title" className="text-3xl font-display font-bold text-tropical-green mb-6">
                 {dict.about.story.title}
               </h2>
-              <p className="text-lg font-body text-foreground/70 leading-relaxed">
+              <p data-publisher-field="story.description" className="text-lg font-body text-foreground/70 leading-relaxed">
                 {dict.about.story.description}
               </p>
             </div>
@@ -45,38 +45,38 @@ export default async function AboutPage({
         </section>
 
         {/* Values */}
-        <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-12">
+        <section data-publisher-section="values" className="mb-20">
+          <h2 data-publisher-field="values.title" className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-12">
             {dict.about.values.title}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🌿</div>
-              <h3 className="text-xl font-display font-bold text-tropical-green mb-3">
+              <h3 data-publisher-field="values.natural.title" className="text-xl font-display font-bold text-tropical-green mb-3">
                 {dict.about.values.natural.title}
               </h3>
-              <p className="text-foreground/70 font-body leading-relaxed">
+              <p data-publisher-field="values.natural.description" className="text-foreground/70 font-body leading-relaxed">
                 {dict.about.values.natural.description}
               </p>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🥭</div>
-              <h3 className="text-xl font-display font-bold text-tropical-green mb-3">
+              <h3 data-publisher-field="values.local.title" className="text-xl font-display font-bold text-tropical-green mb-3">
                 {dict.about.values.local.title}
               </h3>
-              <p className="text-foreground/70 font-body leading-relaxed">
+              <p data-publisher-field="values.local.description" className="text-foreground/70 font-body leading-relaxed">
                 {dict.about.values.local.description}
               </p>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">♻️</div>
-              <h3 className="text-xl font-display font-bold text-tropical-green mb-3">
+              <h3 data-publisher-field="values.sustainable.title" className="text-xl font-display font-bold text-tropical-green mb-3">
                 {dict.about.values.sustainable.title}
               </h3>
-              <p className="text-foreground/70 font-body leading-relaxed">
+              <p data-publisher-field="values.sustainable.description" className="text-foreground/70 font-body leading-relaxed">
                 {dict.about.values.sustainable.description}
               </p>
             </div>
@@ -84,11 +84,11 @@ export default async function AboutPage({
         </section>
 
         {/* Location */}
-        <section className="bg-gradient-to-br from-tropical-green to-tropical-green/90 rounded-3xl p-12 text-white text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-display font-bold mb-4">
+        <section data-publisher-section="location" className="bg-gradient-to-br from-tropical-green to-tropical-green/90 rounded-3xl p-12 text-white text-center max-w-4xl mx-auto">
+          <h2 data-publisher-field="location.title" className="text-3xl font-display font-bold mb-4">
             {dict.about.location.title}
           </h2>
-          <p className="text-xl font-body mb-6">{dict.about.location.description}</p>
+          <p data-publisher-field="location.description" className="text-xl font-body mb-6">{dict.about.location.description}</p>
           <div className="flex justify-center gap-4">
             <a
               href="https://instagram.com"

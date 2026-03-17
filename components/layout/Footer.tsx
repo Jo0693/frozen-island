@@ -13,7 +13,7 @@ interface FooterProps {
 
 export default function Footer({ dict }: FooterProps) {
   return (
-    <footer className="bg-tropical-green text-off-white">
+    <footer data-publisher-section="footer" className="bg-tropical-green text-off-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -24,8 +24,8 @@ export default function Footer({ dict }: FooterProps) {
               </div>
               <span className="font-display font-bold text-lg">Frozen Island</span>
             </div>
-            <p className="text-off-white/80 font-body text-sm mb-2">{dict.tagline}</p>
-            <p className="text-off-white/60 font-body text-sm">{dict.location}</p>
+            <p data-publisher-field="footer.tagline" className="text-off-white/80 font-body text-sm mb-2">{dict.tagline}</p>
+            <p data-publisher-field="footer.location" className="text-off-white/60 font-body text-sm">{dict.location}</p>
           </div>
 
           {/* Links */}

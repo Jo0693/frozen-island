@@ -15,7 +15,7 @@ interface FeatureCardsProps {
 
 export default function FeatureCards({ title, features }: FeatureCardsProps) {
   return (
-    <section className="py-20 bg-off-white">
+    <section data-publisher-section="features" className="py-20 bg-off-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {title && (
           <motion.h2
@@ -23,6 +23,7 @@ export default function FeatureCards({ title, features }: FeatureCardsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-16"
+            data-publisher-field="features.title"
           >
             {title}
           </motion.h2>
@@ -41,10 +42,10 @@ export default function FeatureCards({ title, features }: FeatureCardsProps) {
               {feature.icon && (
                 <div className="text-4xl mb-4">{feature.icon}</div>
               )}
-              <h3 className="text-xl font-display font-bold text-tropical-green mb-3">
+              <h3 className="text-xl font-display font-bold text-tropical-green mb-3" data-publisher-field={`features.items[${index}].title`}>
                 {feature.title}
               </h3>
-              <p className="text-foreground/70 font-body leading-relaxed">
+              <p className="text-foreground/70 font-body leading-relaxed" data-publisher-field={`features.items[${index}].description`}>
                 {feature.description}
               </p>
             </motion.div>
