@@ -1,7 +1,25 @@
+import { getContent, getSeo } from '@/lib/content';
 import type { Locale } from '@/lib/i18n/config';
-import { getDictionary } from '@/lib/i18n/get-dictionary';
-import { drinks } from '@/data/drinks';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = getSeo('drinks', locale);
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.og.title,
+      description: seo.og.description,
+      type: seo.og.type,
+    },
+  };
+}
 
 export default async function DrinksPage({
   params,
@@ -9,7 +27,19 @@ export default async function DrinksPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale);
+  const data = getContent('drinks', locale) as {
+    title: string;
+    subtitle: string;
+    benefits: string;
+    items: {
+      id: string;
+      name: string;
+      description: string;
+      benefits: string[];
+      tags: string[];
+      image: { src: string; alt: string };
+    }[];
+  };
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-cream">
@@ -17,16 +47,16 @@ export default async function DrinksPage({
         {/* Header */}
         <div data-publisher-section="header" className="text-center mb-16">
           <h1 data-publisher-field="drinks.title" className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-            {dict.drinks.title}
+            {data.title}
           </h1>
           <p data-publisher-field="drinks.subtitle" className="text-lg font-body text-foreground/70 max-w-2xl mx-auto">
-            {dict.drinks.subtitle}
+            {data.subtitle}
           </p>
         </div>
 
         {/* Drinks Grid */}
         <div data-publisher-section="drinks-grid" className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {drinks.map((drink) => (
+          {data.items.map((drink, index) => (
             <div
               key={drink.id}
               className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300"
@@ -42,20 +72,20 @@ export default async function DrinksPage({
                 </div>
 
                 <div className="p-8">
-                  <h3 data-publisher-field={`drinks.items[${drinks.indexOf(drink)}].name`} className="text-2xl font-display font-bold text-foreground mb-3">
-                    {drink.name[locale]}
+                  <h3 data-publisher-field={`drinks.items[${index}].name`} className="text-2xl font-display font-bold text-foreground mb-3">
+                    {drink.name}
                   </h3>
-                  <p data-publisher-field={`drinks.items[${drinks.indexOf(drink)}].description`} className="text-foreground/70 font-body mb-6 leading-relaxed">
-                    {drink.description[locale]}
+                  <p data-publisher-field={`drinks.items[${index}].description`} className="text-foreground/70 font-body mb-6 leading-relaxed">
+                    {drink.description}
                   </p>
 
                   <div className="mb-4">
                     <h4 className="text-sm font-body font-semibold text-tropical-green mb-2 uppercase">
-                      {dict.drinks.benefits}
+                      {data.benefits}
                     </h4>
                     <ul className="space-y-1">
-                      {drink.benefits[locale].map((benefit, index) => (
-                        <li key={index} className="text-sm font-body text-foreground/70 flex items-start gap-2">
+                      {drink.benefits.map((benefit, i) => (
+                        <li key={i} className="text-sm font-body text-foreground/70 flex items-start gap-2">
                           <span className="text-mango">✓</span>
                           {benefit}
                         </li>

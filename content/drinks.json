@@ -9,28 +9,44 @@
         "name": "Eau de Coco Fraîche",
         "description": "Hydratation pure directement de la noix, naturellement sucrée.",
         "benefits": ["Hydratation intense", "Riche en électrolytes", "Faible en calories"],
-        "tags": ["signature", "cold", "fresh"]
+        "tags": ["signature", "cold", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop",
+          "alt": "Fresh coconut water"
+        }
       },
       {
         "id": "mango-lassi",
         "name": "Lassi Mangue",
         "description": "Onctuosité tropicale, yaourt et mangue fraîche.",
         "benefits": ["Probiotiques naturels", "Riche en vitamines A & C", "Énergisant"],
-        "tags": ["signature", "fresh"]
+        "tags": ["signature", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=600&h=600&fit=crop",
+          "alt": "Tropical mango lassi"
+        }
       },
       {
         "id": "passion-juice",
         "name": "Jus de Fruit de la Passion",
         "description": "Intensité acidulée et parfumée, 100% pur jus.",
         "benefits": ["Riche en vitamine C", "Antioxydants", "Stimulant naturel"],
-        "tags": ["cold", "fresh"]
+        "tags": ["cold", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=600&fit=crop",
+          "alt": "Fresh passion fruit juice"
+        }
       },
       {
         "id": "dragon-smoothie",
         "name": "Smoothie Dragon",
         "description": "Fruit du dragon, banane et lait de coco, crémeux et rose.",
         "benefits": ["Détoxifiant", "Riche en fibres", "Boost immunitaire"],
-        "tags": ["signature", "detox"]
+        "tags": ["signature", "detox"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&h=600&fit=crop",
+          "alt": "Dragon fruit smoothie bowl"
+        }
       }
     ]
   },
@@ -44,28 +60,44 @@
         "name": "Fresh Coconut Water",
         "description": "Pure hydration straight from the nut, naturally sweet.",
         "benefits": ["Intense hydration", "Rich in electrolytes", "Low in calories"],
-        "tags": ["signature", "cold", "fresh"]
+        "tags": ["signature", "cold", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop",
+          "alt": "Fresh coconut water"
+        }
       },
       {
         "id": "mango-lassi",
         "name": "Mango Lassi",
         "description": "Tropical creaminess, yogurt and fresh mango.",
         "benefits": ["Natural probiotics", "Rich in vitamins A & C", "Energizing"],
-        "tags": ["signature", "fresh"]
+        "tags": ["signature", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=600&h=600&fit=crop",
+          "alt": "Tropical mango lassi"
+        }
       },
       {
         "id": "passion-juice",
         "name": "Passion Fruit Juice",
         "description": "Tangy and aromatic intensity, 100% pure juice.",
         "benefits": ["Rich in vitamin C", "Antioxidants", "Natural stimulant"],
-        "tags": ["cold", "fresh"]
+        "tags": ["cold", "fresh"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&h=600&fit=crop",
+          "alt": "Fresh passion fruit juice"
+        }
       },
       {
         "id": "dragon-smoothie",
         "name": "Dragon Smoothie",
         "description": "Dragon fruit, banana and coconut milk, creamy and pink.",
         "benefits": ["Detoxifying", "High in fiber", "Immune boost"],
-        "tags": ["signature", "detox"]
+        "tags": ["signature", "detox"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&h=600&fit=crop",
+          "alt": "Dragon fruit smoothie bowl"
+        }
       }
     ]
   }

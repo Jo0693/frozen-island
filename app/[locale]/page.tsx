@@ -1,15 +1,32 @@
+import { getContent, getSeo } from '@/lib/content';
 import type { Locale } from '@/lib/i18n/config';
-import { getDictionary } from '@/lib/i18n/get-dictionary';
 import HeroSection from '@/components/sections/HeroSection';
 import FeatureCards from '@/components/sections/FeatureCards';
 import ProductGrid from '@/components/sections/ProductGrid';
 import ImageCarousel from '@/components/sections/ImageCarousel';
 import CallToActionBand from '@/components/sections/CallToActionBand';
-import { fruits } from '@/data/fruits';
-import { drinks } from '@/data/drinks';
 import { imageLibrary } from '@/data/images';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = getSeo('home', locale);
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.og.title,
+      description: seo.og.description,
+      type: seo.og.type,
+    },
+  };
+}
 
 export default async function Home({
   params,
@@ -17,22 +34,28 @@ export default async function Home({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale);
+  const data = getContent('home', locale);
+  const drinksData = getContent('drinks', locale) as {
+    items: { id: string; name: string; description: string; tags: string[]; image: { src: string; alt: string } }[];
+  };
+  const fruitsData = getContent('fruits', locale) as {
+    items: { id: string; name: string; description: string; profile: string[]; tags: string[]; image: { src: string; alt: string } }[];
+  };
 
   const features = [
     {
-      title: dict.home.why.natural.title,
-      description: dict.home.why.natural.description,
+      title: (data as any).why.natural.title,
+      description: (data as any).why.natural.description,
       icon: '🌿',
     },
     {
-      title: dict.home.why.authentic.title,
-      description: dict.home.why.authentic.description,
+      title: (data as any).why.authentic.title,
+      description: (data as any).why.authentic.description,
       icon: '🥥',
     },
     {
-      title: dict.home.why.vibe.title,
-      description: dict.home.why.vibe.description,
+      title: (data as any).why.vibe.title,
+      description: (data as any).why.vibe.description,
       icon: '✨',
     },
   ];
@@ -41,15 +64,15 @@ export default async function Home({
     <>
       {/* Hero Section */}
       <HeroSection
-        label={dict.home.hero.label}
-        title={dict.home.hero.title}
-        subtitle={dict.home.hero.subtitle}
+        label={(data as any).hero.label}
+        title={(data as any).hero.title}
+        subtitle={(data as any).hero.subtitle}
         ctaPrimary={{
-          text: dict.home.hero.ctaPrimary,
+          text: (data as any).hero.ctaPrimary,
           href: `/${locale}/experience`,
         }}
         ctaSecondary={{
-          text: dict.home.hero.ctaSecondary,
+          text: (data as any).hero.ctaSecondary,
           href: `/${locale}/fruits`,
         }}
         imageSrc={imageLibrary.hero.fruit.src}
@@ -57,28 +80,28 @@ export default async function Home({
       />
 
       {/* Why Frozen Island */}
-      <FeatureCards title={dict.home.why.title} features={features} />
+      <FeatureCards title={(data as any).why.title} features={features} />
 
       {/* Fruits Section */}
       <section data-publisher-section="fruits" className="py-20 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 data-publisher-field="fruits.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              {dict.home.fruits.title}
+              {(data as any).fruits.title}
             </h2>
             <p data-publisher-field="fruits.description" className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
-              {dict.home.fruits.description}
+              {(data as any).fruits.description}
             </p>
           </div>
 
-          <ProductGrid fruits={fruits} locale={locale} maxItems={3} />
+          <ProductGrid items={fruitsData.items} maxItems={3} />
 
           <div className="text-center mt-12">
             <Link
               href={`/${locale}/fruits`}
               className="inline-block px-8 py-3 border-2 border-tropical-green text-tropical-green rounded-full font-body font-semibold hover:bg-tropical-green hover:text-white transition-all duration-300"
             >
-              <span data-publisher-field="fruits.viewAll">{dict.home.fruits.viewAll}</span>
+              <span data-publisher-field="fruits.viewAll">{(data as any).fruits.viewAll}</span>
             </Link>
           </div>
         </div>
@@ -89,15 +112,15 @@ export default async function Home({
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 data-publisher-field="drinks.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              {dict.home.drinks.title}
+              {(data as any).drinks.title}
             </h2>
             <p data-publisher-field="drinks.description" className="text-foreground/70 font-body text-lg max-w-2xl mx-auto mb-8">
-              {dict.home.drinks.description}
+              {(data as any).drinks.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {drinks.map((drink, index) => (
+            {drinksData.items.map((drink, index) => (
               <div
                 key={drink.id}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
@@ -112,10 +135,10 @@ export default async function Home({
                 </div>
                 <div className="p-6">
                   <h3 data-publisher-field={`drinks.items[${index}].name`} className="font-display font-bold text-lg text-foreground mb-2">
-                    {drink.name[locale]}
+                    {drink.name}
                   </h3>
                   <p data-publisher-field={`drinks.items[${index}].description`} className="text-sm text-foreground/70 font-body mb-3">
-                    {drink.description[locale]}
+                    {drink.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {drink.tags.map((tag) => (
@@ -137,7 +160,7 @@ export default async function Home({
               href={`/${locale}/drinks`}
               className="inline-block px-8 py-3 border-2 border-tropical-green text-tropical-green rounded-full font-body font-semibold hover:bg-tropical-green hover:text-white transition-all duration-300"
             >
-              <span data-publisher-field="drinks.viewAll">{dict.home.drinks.viewAll}</span>
+              <span data-publisher-field="drinks.viewAll">{(data as any).drinks.viewAll}</span>
             </Link>
           </div>
         </div>
@@ -159,19 +182,19 @@ export default async function Home({
 
             <div>
               <h2 data-publisher-field="experience.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                {dict.home.experience.title}
+                {(data as any).experience.title}
               </h2>
               <p data-publisher-field="experience.subtitle" className="text-xl font-display text-tropical-green mb-6">
-                {dict.home.experience.subtitle}
+                {(data as any).experience.subtitle}
               </p>
               <p data-publisher-field="experience.description" className="text-foreground/70 font-body leading-relaxed mb-8">
-                {dict.home.experience.description}
+                {(data as any).experience.description}
               </p>
               <Link
                 href={`/${locale}/experience`}
                 className="inline-block px-8 py-3 bg-tropical-green text-white rounded-full font-body font-semibold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <span data-publisher-field="experience.cta">{dict.home.experience.cta}</span>
+                <span data-publisher-field="experience.cta">{(data as any).experience.cta}</span>
               </Link>
             </div>
           </div>
@@ -181,14 +204,14 @@ export default async function Home({
       {/* Gallery Preview */}
       <ImageCarousel
         images={imageLibrary.gallery.fruits.slice(0, 5)}
-        title={dict.home.gallery.title}
+        title={(data as any).gallery.title}
       />
 
       {/* Final CTA */}
       <CallToActionBand
-        title={dict.home.finalCta.title}
-        description={dict.home.finalCta.description}
-        ctaText={dict.home.finalCta.cta}
+        title={(data as any).finalCta.title}
+        description={(data as any).finalCta.description}
+        ctaText={(data as any).finalCta.cta}
         ctaHref={`/${locale}/contact`}
       />
     </>
