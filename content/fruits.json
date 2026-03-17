@@ -12,42 +12,66 @@
         "name": "Mangue Givrée",
         "description": "Douceur veloutée et sucrée, la mangue de Bali dans toute sa splendeur tropicale.",
         "profile": ["fruity", "sweet"],
-        "tags": ["signature", "best-seller"]
+        "tags": ["signature", "best-seller"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=600&h=600&fit=crop",
+          "alt": "Frozen mango sorbet in natural shell"
+        }
       },
       {
         "id": "coconut",
         "name": "Coco Glacée",
         "description": "Crème onctueuse et rafraîchissante, servie dans sa noix naturelle.",
         "profile": ["creamy", "sweet"],
-        "tags": ["signature", "best-seller", "kids-friendly"]
+        "tags": ["signature", "best-seller", "kids-friendly"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?w=600&h=600&fit=crop",
+          "alt": "Frozen coconut cream in shell"
+        }
       },
       {
         "id": "dragon-fruit",
         "name": "Fruit du Dragon Gelé",
         "description": "Fraîcheur exotique et légèrement sucrée, avec une texture unique.",
         "profile": ["fruity", "tangy"],
-        "tags": ["signature"]
+        "tags": ["signature"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1547514701-42782101795e?w=600&h=600&fit=crop",
+          "alt": "Frozen dragon fruit sorbet"
+        }
       },
       {
         "id": "passion",
         "name": "Passion Givrée",
         "description": "Acidulé intense et parfumé, pour les amateurs de saveurs vibrantes.",
         "profile": ["tangy", "fruity"],
-        "tags": ["best-seller"]
+        "tags": ["best-seller"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=600&h=600&fit=crop",
+          "alt": "Frozen passion fruit"
+        }
       },
       {
         "id": "pineapple",
         "name": "Ananas Givré",
         "description": "Fraîcheur tropicale sucrée-acidulée, un classique revisité.",
         "profile": ["fruity", "tangy", "sweet"],
-        "tags": ["kids-friendly"]
+        "tags": ["kids-friendly"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1605027990121-cbae9d3b5c3c?w=600&h=600&fit=crop",
+          "alt": "Frozen pineapple sorbet"
+        }
       },
       {
         "id": "papaya",
         "name": "Papaye Glacée",
         "description": "Douceur crémeuse et subtile, une invitation au voyage.",
         "profile": ["creamy", "sweet"],
-        "tags": ["new"]
+        "tags": ["new"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1568471173238-64359358f0f4?w=600&h=600&fit=crop",
+          "alt": "Frozen papaya creation"
+        }
       }
     ]
   },
@@ -64,42 +88,66 @@
         "name": "Frozen Mango",
         "description": "Velvety smooth sweetness, Bali mango in all its tropical splendor.",
         "profile": ["fruity", "sweet"],
-        "tags": ["signature", "best-seller"]
+        "tags": ["signature", "best-seller"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=600&h=600&fit=crop",
+          "alt": "Frozen mango sorbet in natural shell"
+        }
       },
       {
         "id": "coconut",
         "name": "Frozen Coconut",
         "description": "Creamy and refreshing, served in its natural shell.",
         "profile": ["creamy", "sweet"],
-        "tags": ["signature", "best-seller", "kids-friendly"]
+        "tags": ["signature", "best-seller", "kids-friendly"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?w=600&h=600&fit=crop",
+          "alt": "Frozen coconut cream in shell"
+        }
       },
       {
         "id": "dragon-fruit",
         "name": "Frozen Dragon Fruit",
         "description": "Exotic freshness, lightly sweet, with a unique texture.",
         "profile": ["fruity", "tangy"],
-        "tags": ["signature"]
+        "tags": ["signature"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1547514701-42782101795e?w=600&h=600&fit=crop",
+          "alt": "Frozen dragon fruit sorbet"
+        }
       },
       {
         "id": "passion",
         "name": "Frozen Passion Fruit",
         "description": "Intensely tangy and aromatic, for lovers of vibrant flavors.",
         "profile": ["tangy", "fruity"],
-        "tags": ["best-seller"]
+        "tags": ["best-seller"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=600&h=600&fit=crop",
+          "alt": "Frozen passion fruit"
+        }
       },
       {
         "id": "pineapple",
         "name": "Frozen Pineapple",
         "description": "Sweet-tangy tropical freshness, a reinvented classic.",
         "profile": ["fruity", "tangy", "sweet"],
-        "tags": ["kids-friendly"]
+        "tags": ["kids-friendly"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1605027990121-cbae9d3b5c3c?w=600&h=600&fit=crop",
+          "alt": "Frozen pineapple sorbet"
+        }
       },
       {
         "id": "papaya",
         "name": "Frozen Papaya",
         "description": "Creamy and subtle sweetness, an invitation to travel.",
         "profile": ["creamy", "sweet"],
-        "tags": ["new"]
+        "tags": ["new"],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1568471173238-64359358f0f4?w=600&h=600&fit=crop",
+          "alt": "Frozen papaya creation"
+        }
       }
     ]
   }
