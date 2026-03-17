@@ -2,23 +2,32 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import type { Fruit } from '@/data/fruits';
-import type { Locale } from '@/lib/i18n/config';
+
+export interface ProductItem {
+  id: string;
+  name: string;
+  description: string;
+  profile: string[];
+  tags: string[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
 
 interface ProductGridProps {
-  fruits: Fruit[];
-  locale: Locale;
+  items: ProductItem[];
   maxItems?: number;
 }
 
-export default function ProductGrid({ fruits, locale, maxItems }: ProductGridProps) {
-  const displayFruits = maxItems ? fruits.slice(0, maxItems) : fruits;
+export default function ProductGrid({ items, maxItems }: ProductGridProps) {
+  const displayItems = maxItems ? items.slice(0, maxItems) : items;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {displayFruits.map((fruit, index) => (
+      {displayItems.map((item, index) => (
         <motion.div
-          key={fruit.id}
+          key={item.id}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -27,8 +36,8 @@ export default function ProductGrid({ fruits, locale, maxItems }: ProductGridPro
         >
           <div className="relative h-64 overflow-hidden">
             <Image
-              src={fruit.image.src}
-              alt={fruit.image.alt}
+              src={item.image.src}
+              alt={item.image.alt}
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -36,7 +45,7 @@ export default function ProductGrid({ fruits, locale, maxItems }: ProductGridPro
 
             {/* Tags */}
             <div className="absolute top-4 right-4 flex flex-col gap-2">
-              {fruit.tags.map((tag) => (
+              {item.tags.map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 bg-white/90 backdrop-blur-sm text-tropical-green text-xs font-body font-semibold rounded-full capitalize"
@@ -49,13 +58,13 @@ export default function ProductGrid({ fruits, locale, maxItems }: ProductGridPro
 
           <div className="p-6">
             <h3 data-publisher-field={`fruits.items[${index}].name`} className="text-xl font-display font-bold text-foreground mb-2">
-              {fruit.name[locale]}
+              {item.name}
             </h3>
             <p data-publisher-field={`fruits.items[${index}].description`} className="text-foreground/70 font-body text-sm leading-relaxed mb-4">
-              {fruit.description[locale]}
+              {item.description}
             </p>
             <div className="flex flex-wrap gap-2">
-              {fruit.profile.map((prof) => (
+              {item.profile.map((prof) => (
                 <span
                   key={prof}
                   className="px-3 py-1 bg-mint text-tropical-green text-xs font-body rounded-full capitalize"
