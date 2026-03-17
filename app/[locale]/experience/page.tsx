@@ -1,8 +1,27 @@
+import { getContent, getSeo } from '@/lib/content';
 import type { Locale } from '@/lib/i18n/config';
-import { getDictionary } from '@/lib/i18n/get-dictionary';
 import HeroSection from '@/components/sections/HeroSection';
 import { imageLibrary } from '@/data/images';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const seo = getSeo('experience', locale);
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.og.title,
+      description: seo.og.description,
+      type: seo.og.type,
+    },
+  };
+}
 
 export default async function ExperiencePage({
   params,
@@ -10,24 +29,22 @@ export default async function ExperiencePage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale);
+  const data = getContent('experience', locale) as {
+    hero: { title: string; subtitle: string };
+    intro: { title: string; description: string };
+    ritual: {
+      title: string;
+      step1: { title: string; description: string };
+      step2: { title: string; description: string };
+      step3: { title: string; description: string };
+    };
+    ambiance: { title: string; description: string; quote: string };
+  };
 
   const steps = [
-    {
-      number: '01',
-      title: dict.experience.ritual.step1.title,
-      description: dict.experience.ritual.step1.description,
-    },
-    {
-      number: '02',
-      title: dict.experience.ritual.step2.title,
-      description: dict.experience.ritual.step2.description,
-    },
-    {
-      number: '03',
-      title: dict.experience.ritual.step3.title,
-      description: dict.experience.ritual.step3.description,
-    },
+    { number: '01', title: data.ritual.step1.title, description: data.ritual.step1.description },
+    { number: '02', title: data.ritual.step2.title, description: data.ritual.step2.description },
+    { number: '03', title: data.ritual.step3.title, description: data.ritual.step3.description },
   ];
 
   return (
@@ -35,8 +52,8 @@ export default async function ExperiencePage({
       {/* Hero */}
       <HeroSection
         label="Frozen Island"
-        title={dict.experience.hero.title}
-        subtitle={dict.experience.hero.subtitle}
+        title={data.hero.title}
+        subtitle={data.hero.subtitle}
         imageSrc={imageLibrary.hero.lifestyle.src}
         imageAlt={imageLibrary.hero.lifestyle.alt}
       />
@@ -46,10 +63,10 @@ export default async function ExperiencePage({
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 data-publisher-field="intro.title" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              {dict.experience.intro.title}
+              {data.intro.title}
             </h2>
             <p data-publisher-field="intro.description" className="text-lg font-body text-foreground/70 leading-relaxed">
-              {dict.experience.intro.description}
+              {data.intro.description}
             </p>
           </div>
         </div>
@@ -59,7 +76,7 @@ export default async function ExperiencePage({
       <section data-publisher-section="ritual" className="py-20 bg-off-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 data-publisher-field="ritual.title" className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-16">
-            {dict.experience.ritual.title}
+            {data.ritual.title}
           </h2>
 
           <div className="space-y-16">
@@ -104,13 +121,13 @@ export default async function ExperiencePage({
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 data-publisher-field="ambiance.title" className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
-              {dict.experience.ambiance.title}
+              {data.ambiance.title}
             </h2>
             <p data-publisher-field="ambiance.description" className="text-lg font-body text-white/90 leading-relaxed mb-8 text-center">
-              {dict.experience.ambiance.description}
+              {data.ambiance.description}
             </p>
             <blockquote data-publisher-field="ambiance.quote" className="text-2xl font-display italic text-center text-mango">
-              {dict.experience.ambiance.quote}
+              {data.ambiance.quote}
             </blockquote>
           </div>
 
