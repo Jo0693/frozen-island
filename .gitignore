@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# publisher
+.publisher-snapshots/
+.publisher-lighthouse/
+.publisher-versions/
